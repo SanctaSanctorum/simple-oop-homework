@@ -120,7 +120,7 @@ public class TaskStream {
      * @param books - список книг
      * @return самая дешевая книга
      */
-    public static Book task12(List<Book> books) throws IllegalArgumentException {
+    public static Book task12(List<Book> books) {
         return null;
     }
 }
