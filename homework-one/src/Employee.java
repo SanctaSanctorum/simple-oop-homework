@@ -1,3 +1,5 @@
+
+
 public class Employee extends Person {
     String company;
     String position;
@@ -8,6 +10,9 @@ public class Employee extends Person {
         this.company = company;
         this.position = position;
         this.baseSalary = baseSalary;
+    }
+
+    public Employee() {
     }
 
     @Override

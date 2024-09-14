@@ -1,4 +1,4 @@
-public class SaleManager {
+public class SaleManager extends Employee {
     final double totalSales;
     final double bonus;
 
@@ -16,7 +16,6 @@ public class SaleManager {
     }
 
     public double calculateSalary(double baseSalary) {
-
         return baseSalary + bonus;
     }
 

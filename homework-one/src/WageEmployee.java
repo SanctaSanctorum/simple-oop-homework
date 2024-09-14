@@ -16,6 +16,9 @@ public class WageEmployee extends Employee{
         this.wage = wage;
     }
 
+    public WageEmployee() {
+    }
+
     public double calculateSalary() {
         return baseSalary + hours * wage;
     }
