@@ -1,8 +1,13 @@
-import lombok.*;
+package dto;
 
-@Data
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+@Getter
 @NoArgsConstructor
-@Builder
+@ToString
+
 public class Person {
     private String name;
     private int age;
@@ -17,4 +22,5 @@ public class Person {
     public void display() {
         System.out.println(this.toString());
     }
+
 }

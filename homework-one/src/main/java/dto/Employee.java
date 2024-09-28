@@ -1,9 +1,15 @@
+package dto;
 
+import lombok.Getter;
+import lombok.ToString;
+
+@Getter
+@ToString(callSuper = true)
 
 public class Employee extends Person {
-    String company;
-    String position;
-    double baseSalary;
+    private String company;
+    private String position;
+    private double baseSalary;
 
     public Employee(String name, int age, boolean married, String company, String position, double baseSalary) {
         super(name, age, married);
@@ -14,11 +20,5 @@ public class Employee extends Person {
 
     public Employee() {
     }
-
-    @Override
-    public void display(){
-        
-    }
-
 
 }
