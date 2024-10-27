@@ -1,3 +1,9 @@
+package src;
+
+import src.Book;
+import src.TaskStream;
+import src.Assertion;
+
 import java.util.*;
 
 public class Main {

@@ -1,5 +1,6 @@
 package dto;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
@@ -7,7 +8,7 @@ import lombok.ToString;
 @Getter
 @NoArgsConstructor
 @ToString
-
+@EqualsAndHashCode
 public class Person {
     private String name;
     private int age;
@@ -22,5 +23,4 @@ public class Person {
     public void display() {
         System.out.println(this.toString());
     }
-
 }

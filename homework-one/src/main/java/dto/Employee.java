@@ -1,12 +1,13 @@
 package dto;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
 
 @Getter
 @ToString(callSuper = true)
-
-public class Employee extends Person {
+@EqualsAndHashCode
+public abstract class Employee extends Person {
     private String company;
     private String position;
     private double baseSalary;
@@ -18,7 +19,10 @@ public class Employee extends Person {
         this.baseSalary = baseSalary;
     }
 
+
     public Employee() {
     }
+
+   public abstract double calculateSalary();
 
 }

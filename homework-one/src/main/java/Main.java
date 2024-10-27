@@ -31,13 +31,8 @@ public class Main {
         employees[9] = manager4;
 
         PersonApp.printInfo(employees);
-//        PersonApp.printExpensis(employees);
+        System.out.println(PersonApp.getExpensis(employees));
 //        PersonApp.netOperatingIncome(employees);
 
-        Cow cow = new Cow();
-        cow.printName();
-        Whale whale = new Whale();
-        cow.printColor();
-        whale.printName();
     }
 }

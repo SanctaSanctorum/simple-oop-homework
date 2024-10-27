@@ -6,10 +6,7 @@ import dto.SaleManager;
 import dto.WageEmployee;
 
 import java.text.DecimalFormat;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
+import java.util.*;
 
 public class PersonApp {
 
@@ -26,16 +23,12 @@ public class PersonApp {
 
         //Переписать с учетом полиморфизма, утащить внутрь емплоее переопределяя в классах наследниках.
         // утащить и написать в каком формате и переписать гетинтенсив
+
+
         double managerExpense = 0;
         for (int i = 0; i < employees.length; i++) {
             Employee employee = employees[i];
-            if (employee instanceof Manager manager) {
-                managerExpense += manager.calculateSalary();
-            } else if (employee instanceof SaleManager saleManager) {
-                managerExpense += saleManager.calculateSalary();
-            } else if (employee instanceof WageEmployee wageEmployee) {
-                managerExpense += wageEmployee.calculateSalary();
-            }
+            managerExpense += employee.calculateSalary();
         }
         return managerExpense;
     }
@@ -51,4 +44,11 @@ public class PersonApp {
         }
         return netOperatingIncome;
     }
+
+    public static boolean search(Employee[] employees, Employee employee) {
+        return Arrays.asList(employees).contains(employee);
+    }
+
 }
+
+//Проверить, что сам массив не ссылается на нулл, и внутри элементы не нулл через if. и возвращать 0 или -1.

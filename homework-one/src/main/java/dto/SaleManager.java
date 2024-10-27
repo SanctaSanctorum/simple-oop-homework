@@ -1,12 +1,13 @@
 package dto;
 
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
 
 @Getter
 @ToString(callSuper = true)
-
+@EqualsAndHashCode
 public class SaleManager extends Employee {
     private double totalSales;
     private double bonus;
@@ -17,6 +18,7 @@ public class SaleManager extends Employee {
         this.bonus = bonus;
     }
 
+    @Override
     public double calculateSalary() {
         return super.getBaseSalary() + bonus;
     }
